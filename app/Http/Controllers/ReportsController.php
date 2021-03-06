@@ -18,6 +18,7 @@ class ReportsController extends Controller
 
         return view('reports.index', [
             'controller_name' => "รายงาน End User",
+            'module_header' => "ระบบรายงานออนไลน์ HOSinfo V.2",
             'active_menu_report' => "active",
             'replist' => $replist,
         ]);

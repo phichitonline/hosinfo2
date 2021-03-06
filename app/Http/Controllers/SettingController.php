@@ -16,6 +16,7 @@ class SettingController extends Controller
     {
         return view('setting.index', [
             'controller_name' => "ตั้งค่าระบบ",
+            'module_header' => "ตั้งค่าระบบ HOSinfo V.2",
             'active_menu_setting' => "active",
         ]);
     }
