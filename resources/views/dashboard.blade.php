@@ -7,7 +7,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            {{ $controller_name }}
+            XXXX {{ $controller_name }}
             <small>{{ config('app.name') }}</small>
         </h1>
         <ol class="breadcrumb">
