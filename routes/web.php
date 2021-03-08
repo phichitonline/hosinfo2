@@ -18,10 +18,13 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-// ทำการ authen ก่อนใช้งาน controller
+// authen ก่อนใช้งาน controller
 // Route::get('/', [DashboardController::class, 'index'])->name('dashboard')->middleware(['auth:sanctum', 'verified']);
-Route::middleware(['auth:sanctum', 'verified'])->get('/setting', [SettingController::class, 'index'])->name('setting');
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/setting', [SettingController::class, 'index'])->name('setting');
+Route::get('/home', [ProfileController::class, 'index'])->name('home');
+Route::middleware(['auth:sanctum', 'verified'])->get('/profile', [ProfileController::class, 'index'])->name('profile');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
 //     return view('welcome');
