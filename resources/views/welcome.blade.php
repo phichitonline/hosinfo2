@@ -27,7 +27,7 @@
             <!-- timeline time label -->
             <li class="time-label">
                   <span class="bg-red">
-                    Vue.JS
+                    Home
                   </span>
             </li>
             <!-- /.timeline-label -->
@@ -36,19 +36,16 @@
               <i class="fa fa-envelope bg-blue"></i>
 
               <div class="timeline-item">
-                <h3 class="timeline-header"><a href="#">ทดสอบการใช้งาน v-model text debounce</a></h3>
+                <h3 class="timeline-header">Home Profile</h3>
 
-                    <div class="timeline-body" id="app">
+                    <!-- <div class="timeline-body" id="app">
                         <vue-testpage></vue-testpage>
-                    </div>
+                    </div> -->
 
               </div>
             </li>
             <!-- END timeline item -->
 
-            <li>
-              <i class="fa fa-clock-o bg-gray"></i>
-            </li>
           </ul>
         </div>
         <!-- /.col -->
@@ -56,7 +53,7 @@
       <!-- /.row -->
 
     </section>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
 </div>
 <!-- ./wrapper -->

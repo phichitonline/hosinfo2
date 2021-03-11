@@ -23,8 +23,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/setting', [SettingController::class, 'index'])->name('setting');
-Route::get('/home', [ProfileController::class, 'index'])->name('home');
-Route::middleware(['auth:sanctum', 'verified'])->get('/profile', [ProfileController::class, 'index'])->name('profile');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/profile', [ProfileController::class, 'index'])->name('profile');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
 //     return view('welcome');
@@ -34,6 +33,9 @@ Route::get('/test', function () {
     return view('welcome');
 })->name('test');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', 'App\Http\Controllers\ProfileController@index')->name('home');
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/home', [Profile2Controller::class, 'index'])->name('home');
 Route::middleware(['auth:sanctum', 'verified'])->get('/reports', [ReportsController::class, 'index'])->name('reports');
 Route::middleware(['auth:sanctum', 'verified'])->get('/reports/{id}', [ReportsController::class, 'showreport'])->name('showreport');
 
